@@ -1,0 +1,21 @@
+// .devcontainer/devcontainer.json
+{
+    "name": "Rust", // 任意の名前
+    "image": "mcr.microsoft.com/devcontainers/rust:1", // Rustの公式Devcontainer イメージを使用
+  
+    // Rustのバージョンを指定
+    "settings": {
+      "terminal.integrated.defaultProfile.linux": "bash"
+    },
+  
+    // コメントアウトするとVSCodeの拡張機能が自動でインストールされます
+    "extensions": [
+      "rust-lang.rust"
+    ],
+  
+    // コンテナ内でコマンドを実行
+    "postCreateCommand": "rustup component add rustfmt clippy",
+  
+    // ポート番号をフォワーディングするときはこの部分を有効にする
+    // "forwardPorts": [3000]
+  }
